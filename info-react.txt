@@ -25,5 +25,12 @@ ReactDOM.render(
   document.querySelector("#root")
 );
 
-.......... 
+.......... map()
 
+// map - полезная функция, постепенно создает новыую строчку, и там каждую меняет на слова в массиве arr.
+
+.......... Папки
+
+node_modelus - все модули
+public - то что видит пользователь, внешне типо(index.html, faction.ico)
+src(source) - то что украшает и функционирует (index.js, style.css)

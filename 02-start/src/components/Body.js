@@ -1,7 +1,6 @@
 import BodyItem from "./BodyItem";
 
 const Body = () => {
-
     const arr = [
         "Hit the gym", 
         "Pay bills", 
@@ -10,7 +9,6 @@ const Body = () => {
         "Read a book", 
         "Organize office"
     ]
-
     return (
         <ul id="myUL">
             {arr.map(

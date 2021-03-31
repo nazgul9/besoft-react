@@ -11,11 +11,10 @@ class Body extends Component {
         this.setState(
             (state) => {
                 const arr = state.arr.filter(
-                    (item)=>item !== deletItem
+                    (item)=>item!==deletItem)
                     return {arr}
                 )
             }
-        )-
     }
 
     render(){

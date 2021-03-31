@@ -9,6 +9,10 @@ class BodyItem extends Component {
     state = { // сотояние
         checked: false
     }
+    
+    onDbClickDelete = () => {
+        this.props.deleteItem(this.props.item)
+    }
 
     onClickChecked = () => {
         this.setState(
@@ -29,7 +33,7 @@ class BodyItem extends Component {
             classNameChecked = "checked"
         }
 
-        return <li onClick={this.onClickChecked} className={classNameChecked}>{this.props.item}</li>
+        return <li onDoubleClick={this.onDbClickDelete} onClick={this.onClickChecked} className={classNameChecked}>{this.props.item}</li>
     }
 }
 

@@ -13,11 +13,10 @@ class Body extends Component {
                 const arr = state.arr.filter(
                     (item)=>item!==deletItem)
                     return {arr}
-                )
-            }
+            })    
     }
 
-    render(){
+    render() {
         return (
             <ul id="myUL">
                 {this.state.arr.map(

@@ -34,3 +34,13 @@ ReactDOM.render(
 node_modelus - все модули
 public - то что видит пользователь, внешне типо(index.html, faction.ico)
 src(source) - то что украшает и функционирует (index.js, style.css)
+
+........... class
+
+state сохраняет все значения которые меняются, после его измнения работает сам React.
+
+e.preventDefault() // не делай свою работу(не перезагружай сайт)
+
+this.setState(()=>{ // меняет state(состяние)
+
+}) 

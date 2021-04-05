@@ -31,8 +31,15 @@ class App extends Component {
     addItem = (item) => {
         this.setState( // меняет state(состяние)
             (state)=>{
-                const arr = [item,...state.arr] // ... озночает что вместо state, будет вставляться все его значения внутри
-                return {arr}
+                if (state.arr.find((todo) => todo === item) === undefined) {
+                    const arr = [item,...state.arr]
+                    return {arr}
+                } else if (state.arr.find((todo) => todo === item) !== undefined) {
+                    let num = "("+1+")"
+                    const arr = [item+ num,...state.arr]
+                    return {arr}
+                }
+                
             }
         )
     }

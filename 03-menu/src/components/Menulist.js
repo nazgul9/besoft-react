@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import MenuItem from './MenuItem';
 
 class Munelist extends Component {
-    render() {
-        return (
+
+    state = {
+        ListM: (
             <table className="table border">
                 <thead>
                     <tr>
@@ -21,6 +22,12 @@ class Munelist extends Component {
                     <MenuItem/>
                 </tbody>
             </table>
+        )
+    }
+
+    render() {
+        return (
+            this.state.ListM
         )
     }
 }

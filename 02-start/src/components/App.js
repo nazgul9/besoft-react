@@ -39,7 +39,6 @@ class App extends Component {
                     const arr = [item+ num,...state.arr]
                     return {arr}
                 }
-                
             }
         )
     }

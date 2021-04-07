@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cart from '../components/Cart';
 import Menulist from '../components/Menulist';
 
 class App extends Component {
@@ -41,7 +42,6 @@ class App extends Component {
             (state)=>{
                 const food = state.menu.find((item)=>item.id === id)
                 const foods = [...state.cart.foods, {...food}] 
-
                 return {cart:{foods}} // это строка переносит данные с переменой foods, на массив state.cart.foods 
             }
         )
@@ -53,6 +53,7 @@ class App extends Component {
             <div className="container">
                 <h1 className="text">Menu</h1>
                 <Menulist addCart={this.addCart} menu = {this.state.menu}/>
+                <Cart cart = {this.state.cart} />
             </div>
         )
     }

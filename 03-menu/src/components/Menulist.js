@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import MenuItem from './MenuItem';
 
-class Munelist extends Component {
-
-    state = {
-        ListM: (
+class Menulist extends Component {
+    render() {
+        return (
             <table className="table border">
                 <thead>
                     <tr>
@@ -12,24 +11,17 @@ class Munelist extends Component {
                         <th scope="col">Name</th>
                         <th scope="col">Volume</th>
                         <th scope="col">Price</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <MenuItem/>
-                    <MenuItem/>
-                    <MenuItem/>
-                    <MenuItem/>
-                    <MenuItem/>
+                    {this.props.menu.map((item, index)=>(
+                        <MenuItem addCart = {this.props.addCart} index = {index} key={item.id} item = {item} />
+                    ))}
                 </tbody>
             </table>
         )
     }
-
-    render() {
-        return (
-            this.state.ListM
-        )
-    }
 }
 
-export default Munelist;
+export default Menulist;

@@ -2,13 +2,22 @@ import React, { Component } from 'react';
 
 class MenuItem extends Component {
 
-    state = {
-        ItemM: <tr><th scope="row">1</th><th>Manty</th><th>300g</th><th>120som</th></tr> 
+    addCart = () => {
+        this.props.addCart(this.props.item.id)
     }
 
     render() {
+        const item = this.props.item
         return (
-            this.state.ItemM
+            <tr>
+                <th scope="row">{this.props.index + 1}</th>
+                <th>{item.name}</th>
+                <th>{item.gram} g</th>
+                <th>{item.price} som</th>
+                <td>
+                    <button onClick={this.addCart} className="btn btn-primary">Add</button>
+                </td>
+            </tr> 
         )
     }
 }

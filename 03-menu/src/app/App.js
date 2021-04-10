@@ -14,33 +14,43 @@ class App extends Component {
                 id: 17,
                 name: "Manty",
                 gram: "300",
-                price: "120"
+                price: 120
             },
             {
                 id: 16,
                 name: "Shashlyk",
                 gram: "120",
-                price: "70"
+                price: 70
             },
             {
                 id: 15, // для исплавления ошибки с "key"
                 name: "Plov",
                 gram: "300",
-                price: "150"
+                price: 150
             },
             {
                 id: 14,
                 name: "Lagman",
                 gram: "300",
-                price: "140"
+                price: 140
             }
         ]
+    }
+
+    deleteItem = (deletItem) =>{
+        this.setState(
+            (state) => {
+                const arr = state.cart.foods.filter(
+                    (item) => item !==deletItem)
+                    return {arr}
+            })    
     }
 
     addCart = (id) =>{
         this.setState(
             (state)=>{
                 const food = state.menu.find((item)=>item.id === id)
+                console.log(...state.cart.foods)
                 const foods = [...state.cart.foods, {...food}] 
                 return {cart:{foods}} // это строка переносит данные с переменой foods, на массив state.cart.foods 
             }
@@ -53,7 +63,7 @@ class App extends Component {
             <div className="container">
                 <h1 className="text">Menu</h1>
                 <Menulist addCart={this.addCart} menu = {this.state.menu}/>
-                <Cart cart = {this.state.cart} />
+                <Cart deleteItem = {this.deleteItem}  foods = {this.state.cart.foods} cart = {this.state.cart} />
             </div>
         )
     }

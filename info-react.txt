@@ -1,3 +1,6 @@
+уставовить все что нужно [npx create-react-app {namepro}]
+
+
 export default <Filename> // так мы разрешаем import
 
 ........... тут примеры import

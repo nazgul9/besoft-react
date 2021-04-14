@@ -51,3 +51,8 @@ this.setState(()=>{ // меняет state(состяние)
 ////// функцию найти (find)
 
 find()
+
+
+bootstrap CDN: 
+
+import "bootstrap/dist/css/bootstrap.min.css"

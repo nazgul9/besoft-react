@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+boxi {
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+}

@@ -1,7 +1,6 @@
-.box {
-  width: 300px;
-  height: 300px;
-  background-color: pink;
+.cub {
+  display: flex;
+  justify-content: center;
 }
 
 .button {

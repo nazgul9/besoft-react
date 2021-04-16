@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useState } from "react";
+import "./index.css";
 
 const App = () => {
-  const [marginRight, setRight] = useState("px")
-  const [marginTop, setUp] = useState("px")
-  const [marginBottom, setDown] = useState("px")
-  const [marginLeft, setLeft] = useState("px")
+  const [top, setTop] = useState(0);
+  const [left, setLeft] = useState(0);
 
   return (
-    <div className="container">
+    <div>
       <div>
-          <button onClick = {()=>setRight(10)} className="button">right</button>
-          <button onClick = {()=>setUp()} className="button">up</button>
-          <button onClick = {()=>setDown()} className="button">down</div>
-          <button onClick = {()=>setLeft()} className="button">left</div>
+        <button onClick={() => setLeft(left - 100)}>Left</button>
+        <button onClick={() => setLeft(left + 100)}>Right</button>
+        <button onClick={() => setTop(top - 100)}>Up</button>
+        <button onClick={() => setTop(top + 100)}>Down</button>
       </div>
-      <div>
-        <div style={{marginRight},{marginTop},{marginBottom},{marginLeft}} className="box">
-
-        </div>
+      <div className='cub'>
+        <div
+          style={{
+            backgroundColor: "rgb(153, 255, 204)",
+            width: "300px",
+            height: "300px",
+            marginTop: top + "px",
+            marginLeft: left + "px",
+          }}
+          className="box"
+        ></div>
       </div>
     </div>
   );

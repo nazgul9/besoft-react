@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+const App = () => {
+  const [marginRight, setRight] = useState("px")
+  const [marginTop, setUp] = useState("px")
+  const [marginBottom, setDown] = useState("px")
+  const [marginLeft, setLeft] = useState("px")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div>
+          <button onClick = {()=>setRight(10)} className="button">right</button>
+          <button onClick = {()=>setUp()} className="button">up</button>
+          <button onClick = {()=>setDown()} className="button">down</div>
+          <button onClick = {()=>setLeft()} className="button">left</div>
+      </div>
+      <div>
+        <div style={{marginRight},{marginTop},{marginBottom},{marginLeft}} className="box">
+
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

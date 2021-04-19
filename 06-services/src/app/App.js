@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from 'axios'
 import NewsItem from './NewsItem'
+
 
 const initialState = [
     {
@@ -31,6 +33,11 @@ const initialState = [
 const App = () => {
 
     const [news, setNews] = useState(initialState)
+    useEffect(()=>{
+        axios.get("https://nurkadyrnur.pythonanywhere.com/news/").then((res)=>{
+            setNews(res.data.results);
+        })
+    },[])
 
     return (
         <div>

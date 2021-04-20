@@ -1,0 +1,10 @@
+.cub {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+}

@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import Navbar from "../components/Navbar"
+import { Link, Route } from 'react-router-dom';
+import Contacts from '../../../06-services my/src/components/Contacts';
+import Navbar from '../components/Navbar';
+import About from '../components/About'
+import Contacts form '../components/'
 
 const initalState = [
   {
@@ -47,17 +51,31 @@ const App = () => {
         </div>
         <div className="container border shadow-sm rounded p-4">
           <div className="row">
-            {books.map((item) => (
-              <div className="col-3">
-                <div className="card books-item">
-                  <img className="card-img-top" src={item.image} alt=""></img>
-                  <div className="card-body">
-                    <h2 className="card-title">{item.title}</h2>
-                    <p className="card-text">Price: {item.price} som</p>
+            <Route path="/" exact>
+              {books.map((item) => (
+                <div className="col-3">
+                  <div className="card books-item">
+                    <img className="card-img-top" src={item.image} alt=""></img>
+                    <div className="card-body">
+                      <h2 className="card-title">{item.title}</h2>
+                      <p className="card-text">Price: {item.price} som</p>
+                    </div>
+                    <div>
+                      <a className="mb-2 ml-4 btn btn-primary">Detail</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </Route>
+            <Route path="/about" exact>
+              <About />
+            </Route>
+            <Route path="/contacts" exact>
+              <Contacts />
+            </Route>
+            <Route path="/" exact>
+              <Detail />
+            </Route>
           </div>
         </div>
       </main>

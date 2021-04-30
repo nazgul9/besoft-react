@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-plus navbar-expand-lg navbar-dark bg-dark shadow-sm border mb-3">
+        <nav className="navbar navbar-plus navbar-expand-lg navbar-dark bg-dark shadow-sm mb-3">
             <div className="container">
                 <NavLink className="navbar-brand brand-plus" to="/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mr-2 bi bi-hurricane" viewBox="0 0 16 16">

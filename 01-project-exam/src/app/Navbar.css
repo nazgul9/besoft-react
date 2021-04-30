@@ -1,0 +1,22 @@
+.modern{
+    color: #00ffe185!important;
+    transition: 0.2s;
+    font-size: 17.2px;
+}
+
+.modern:hover {
+    color: #00FFE0!important;
+}
+
+.navbar-plus {
+    background-color: #000000d2!important;
+}
+
+.brand-plus {
+    color: #00FFE0!important;
+    transition: 0.15s;
+}
+
+.size-hurricane {
+    font-size: 20spx!important;
+}

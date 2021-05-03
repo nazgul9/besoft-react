@@ -17,7 +17,7 @@ const NewsItem = (props) => {
             src={`https://nurkadyrnur.pythonanywhere.com${item.image_detail}`}
           ></img>
           <p className="card-text">{parser(item.short_body || "")}</p>
-          <Link to={`/news/${item.id}`} className="btn btn-primary">
+          <Link to={`/news/${id}`} className="btn btn-primary">
             Detail
           </Link>
         </div>

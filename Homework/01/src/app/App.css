@@ -1,0 +1,10 @@
+.img-nice:hover {
+    border: 1px solid rgb(255, 249, 85);
+    cursor: pointer;
+    margin: 5px;
+}
+
+.img-nice {
+    border: 1px solid white;
+    transition: 0.2s;
+}

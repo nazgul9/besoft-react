@@ -2,13 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import {addToCart} from '../actions/cart'
 
-
-const Detail = ({ state }) => {
+const Detail = ({products, addToCart}) => {
 
     const { itemId } = useParams()
 
-    const product = state.find((item) => item.id == itemId)
+    const product = products.find((item) => item.id == itemId)
 
     return (
         <div>
@@ -22,9 +22,9 @@ const Detail = ({ state }) => {
                         {product.description}
                     </p>
                     <p>
-                        <Link to="/" className="btn btn-primary">
+                        <button onClick={() => addToCart(product)} href="#" className="btn btn-primary">
                             Buy
-                        </Link>
+                        </button>
                         <span className="ml-2 text-primary h6 font-weight-bold">
                             Price: {product.price}$
                         </span>
@@ -35,8 +35,8 @@ const Detail = ({ state }) => {
     );
 };
 
-const msp = (state) => {
-    return { state }
+const msp = ({ products }) => {
+    return { products }
 }
 
-export default connect(msp)(Detail);
+export default connect(msp, {addToCart})(Detail);

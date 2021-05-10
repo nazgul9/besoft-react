@@ -1,6 +1,10 @@
-import products from '../data/products'
-const reduce = (state=products, actions) => {
-    return state
-}
+import { combineReducers } from 'redux'
+import products from './products'
+import cart from './cart'
+
+const reduce = combineReducers({
+    products,
+    cart
+})
 
 export default reduce

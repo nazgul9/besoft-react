@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Contacts extends Component {
+export default class Books extends Component {
     render() {
         return (
             <div>
-                <h1>567890-=</h1>
+                <h1>books</h1>
             </div>
         )
     }

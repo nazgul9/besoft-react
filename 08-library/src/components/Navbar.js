@@ -1,22 +1,23 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm border mb-3">
             <div className="container">
-                <a className="navbar-brand" href="#">Books</a>
+                <Route className="navbar-brand" href="#">Books</Route>
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a href="#" className="nav-link">Home</a>
+                        <a href="/Home" className="nav-link">Home</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link">About</a>
+                        <a href="/About" className="nav-link">About</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link">Contacts</a>
+                        <a href="/Contacts" className="nav-link">Contacts</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link">Register</a>
+                        <a href="/Register" className="nav-link">Register</a>
                     </li>
                 </ul>
             </div>

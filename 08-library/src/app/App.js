@@ -3,8 +3,9 @@ import { Route } from 'react-router';
 import { Link } from 'react-router-dom';
 import Navbar from "../components/Navbar"
 import Items from '../components/Items'
+import Footer from '../components/Footer';
 
-const initalState = [
+const i = [
   {
     id: 1,
     title: 'Evgeny Onegin',
@@ -36,17 +37,14 @@ const initalState = [
 ]
 
 const App = () => {
-
-  const [books, setBooks] = useState(initalState)
-
-  return (
+return (
     <div>
       <header>
         <Navbar />
       </header>
       <main>
         <div className="container">
-          <h1 className="text-center">Books</h1>
+
         </div>
         <div className="container border shadow-sm rounded p-4">
           <Route path="/" exact>
@@ -69,14 +67,20 @@ const App = () => {
           </Route>
           <Route path='/items'>      
             {books.map((item) => (
-              <div key={item.id}>
+              <div>
                 <Items item={item} />
               </div>
             ))}
           </Route>
-
         </div>
       </main>
+      <footer>
+        <Router path="/Footer">
+        <div>
+                <Footer item={item} />
+              </div>
+        </Router>
+      </footer>
     </div>
   );
 };

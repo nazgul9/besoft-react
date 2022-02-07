@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Contacts extends Component {
+export default class Home extends Component {
     render() {
         return (
             <div>
-                <h1>567890-=</h1>
+                <h2>home</h2>
             </div>
         )
     }

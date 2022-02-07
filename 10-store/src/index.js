@@ -13,6 +13,7 @@ ReactDOM.render(
     <BrowserRouter>
        <Provider store={store}> {/*Provider - переносит наши данные(в данном случаее store), в любую часть всего сайта */}
         <App />
+        
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

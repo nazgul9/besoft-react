@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './app/App';
+import About from "../src/components/About"
+import Home from "../src/components/Home"
+import Contacts from "../src/components/Contacts"
+import Register from "../src/components/Register"
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
+  <BrowserRouter>,
+    <App />,
+    <About></About>,
+    <Home/>,
+    <Contacts/>,
+    <Register/>,
+
   </BrowserRouter>,
   document.getElementById('root')
 );
